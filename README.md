@@ -12,5 +12,5 @@ curl -fsSL https://test.docker.com | sudo sh
 git clone https://github.com/neon0ff/xray_vless
 ```
 ```bash
-xray_vless | unzip xray.zip | rm xray.zip
+cd xray_vless \ unzip xray.zip \ rm xray.zip
 ```
