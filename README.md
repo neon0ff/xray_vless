@@ -9,8 +9,8 @@ curl -fsSL https://test.docker.com | sudo sh
 ```
 ##### Скачиваем репозиторий и разархивируем ```xray```
 ```bash
-git clone https://github.com/neon0ff/xray_vless | cd xray_vless
+git clone https://github.com/neon0ff/xray_vless
 ```
 ```bash
-unzip xray.zip | rm xray.zip
+xray_vless | unzip xray.zip | rm xray.zip
 ```
