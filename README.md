@@ -12,5 +12,20 @@ curl -fsSL https://test.docker.com | sudo sh
 git clone https://github.com/neon0ff/xray_vless
 ```
 ```bash
-cd xray_vless \ unzip xray.zip \ rm xray.zip
+cd xray_vless
 ```
+```bash
+unzip xray.zip
+```
+```bash
+rm xray.zip
+```
+##### Далее редактируем ```config.json``` под свои параметры и требования
+```bash
+sudo nano config.json
+```
+##### Для генирации данныих млжете воспольщоваться этим
+```bash
+docker run itdoginfo/sing-box:v1.9.3 gen-vless
+```
+##### После изменений делате сборку и запускаете контейнер с вашим образом
