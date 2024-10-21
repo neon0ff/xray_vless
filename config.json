@@ -1,0 +1,38 @@
+{
+  "log": {
+    "loglevel": "debug"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "73c15b58-6f1c-4cb5-98ed-c8dde2427b3c",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "livevideocloud.com:443",
+          "xver": 0,
+          "serverNames": ["livevideocloud.com"],
+          "privateKey": "kLth955utlUyMqEE1e5XqplNADf_wxvxphQqRPFMyV4",
+          "shortIds": ["edb1c42b3ffdd9a4"]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
