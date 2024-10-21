@@ -7,3 +7,10 @@ sudo apt-get install unzip
 ```bash
 curl -fsSL https://test.docker.com | sudo sh
 ```
+##### Скачиваем репозиторий и разархивируем ```xray```
+```bash
+git clone https://github.com/neon0ff/xray_vless | cd xray_vless
+```
+```bash
+unzip xray.zip | rm xray.zip
+```
