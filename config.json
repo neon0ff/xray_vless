@@ -20,9 +20,9 @@
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "YOUR_DESR_SERVER:443",
+          "dest": "YOUR_DEST_SERVER:443",
           "xver": 0,
-          "serverNames": ["YOUR_DESR_SERVER"],
+          "serverNames": ["YOUR_DEST_SERVER"],
           "privateKey": "YOUR_PRIVAT_KEY",
           "shortIds": ["YOUR_SHORT_ID"]
         }
