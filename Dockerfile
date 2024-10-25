@@ -32,7 +32,7 @@ CMD SERVER_IP=$(curl -s 2ip.ru) && \
     jq -n \
         --arg uuid "$(jq -r '.inbounds[0].settings.clients[0].id' /etc/xray/config.json)" \
         --arg short_id "$(jq -r '.inbounds[0].streamSettings.realitySettings.shortIds[0]' /etc/xray/config.json)" \
-        --arg public_key "xwMcjQ-YZOOWy0fHaR1SQsjKMGbDlnXqts7DwcLEulY" \
+        --arg pbk "xwMcjQ-YZOOWy0fHaR1SQsjKMGbDlnXqts7DwcLEulY" \
         --arg server "$SERVER_IP" \
         --arg server_port "$SERVER_PORT" \
         --arg flow "$(jq -r '.inbounds[0].settings.clients[0].flow' /etc/xray/config.json)" \
@@ -41,6 +41,6 @@ CMD SERVER_IP=$(curl -s 2ip.ru) && \
         --arg security "$(jq -r '.inbounds[0].streamSettings.security' /etc/xray/config.json)" \
         --arg fp "chrome" \
         --arg sni "$SNI" \
-        '{uuid: $uuid, short_id: $short_id, public_key: $public_key, server_ip: $ip, flow: $flow, fp: $fp, sni: $sni}' \
+        '{uuid: $uuid, sid: $short_id, pbk: $public_key, server: $server, server_port: $server_port, flow: $flow, fp: $fp, sni: $sni}' \
         > /usr/share/nginx/html/config_data.json && \
     nginx -g 'daemon off;' & /usr/local/bin/xray -config /etc/xray/config.json
