@@ -1,7 +1,7 @@
 ### Сборка образов
 ##### Собираем образ keygen-singbox
 ```bash
-dokcer build -t keygen-singbox -f Dockerfile_keygen .
+docker build -t keygen-singbox -f Dockerfile_keygen .
 ```
 ##### Собираем образ xRay
 ```bash
