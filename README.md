@@ -7,13 +7,13 @@ dokcer build -t keygen-singbox -f Dockerfile_keygen .
 ```bash
 docker build -t xray-vless .
 ```
-
-### Сборка образов
+---
+### Сборка контейнеров
 ##### Запуск контейнеров ччерез docker compose
 ```bash
 docker-compose up -d
 ```
-
+---
 ##### Запуск контейнеров в ручном режиме
 ##### 1) Запускаем keygen
 ```bash
