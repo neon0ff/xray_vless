@@ -11,7 +11,7 @@ docker build -t xray-vless .
 ### Сборка контейнеров
 ##### Запуск контейнеров ччерез docker compose
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 ---
 ##### Запуск контейнеров в ручном режиме
