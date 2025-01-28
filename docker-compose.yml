@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  keygen-singbox:
+    image: keygen-singbox
+    volumes:
+      - ./data:/etc/keygen
+    restart: no
+
+  xray-vless:
+    image: xray-vless
+    volumes:
+      - ./data/config.json:/etc/xray/config.json
+      - ./data/public_key.env:/etc/keygen/public_key.env
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - keygen-singbox
+    restart: unless-stopped
