@@ -1,0 +1,23 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    # Устанавливаем корневую директорию для веб-контента
+    root /usr/share/nginx/html;
+
+    # Главная страница
+    location / {
+        index index.html;
+        try_files $uri $uri/ =404;
+    }
+
+    # Настройка для config_data.json
+    location /config_data.json {
+        try_files $uri =404;
+    }
+
+    # Предотвращение рекурсии 404
+    location = /404.html {
+        internal;
+    }
+}
