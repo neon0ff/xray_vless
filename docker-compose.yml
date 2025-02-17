@@ -1,14 +1,14 @@
-version: '3.8'
-
 services:
   keygen-singbox:
-    image: keygen-singbox
+    container_name: keygen
+    build: keygen/.
     volumes:
       - ./data:/etc/keygen
     restart: no
 
   xray-vless:
-    image: xray-vless
+    container_name: xray
+    build: xray_server/.
     volumes:
       - ./data/config.json:/etc/xray/config.json
       - ./data/public_key.env:/etc/keygen/public_key.env
